@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% layout('/layouts/boilerplate') -%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Listing</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+        <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+            <h2>New Listings</h2>
+           
+            <div>
+                <label for="title">Title:: </label>
+                <input class="form-control " id="title" name="title" type="text" placeholder="Enter Title here" required>
+                <div class="invalid-feedback mb-3">Please Enter Valid Titile</div> 
+            </div>
+            <div>
+                <label for="des">Description:: </label> 
+                <textarea class="form-control " id="des" name="description" type="text" placeholder="Enter Description" required minlength="10" maxlength="100"></textarea>
+                <div class="invalid-feedback mb-3">Please Enter Short Description</div> 
+            </div>
+            <div>
+                <label for="img">Upload Image:: </label> 
+                <input class="form-control mb-3" id="img" name="image" type="file">
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="price">Price:: </label> 
+                    <input class="form-control " id="price" name="price" type="number" placeholder="Enter price" required>
+                    <div class="invalid-feedback mb-3">Please Enter Valid Price</div> 
+                </div>
+                <div class="col-md-8">
+                    <label for="loc">Location:: </label> 
+                    <input class="form-control " id="loc" name="location" type="text" placeholder="Enter Location" required>
+                    <div class="invalid-feedback mb-3">Please Enter Valid Location</div> 
+                </div>
+
+            </div>
+           
+            <div>
+                <label for="coun">Country:: </label> 
+                <input class="form-control mb-2" id="coun" name="country" type="text" placeholder="Enter Country" required>
+                <div class="invalid-feedback mb-3">Please Enter Valid Country Name</div> 
+            </div>
+            <input class="btn btn-danger" type="submit" value="SUBMIT"><br><br>
+        </form>
+    </div>
+
+    </div>
+    <script src="/JS/Validation.js"></script>
+   
+    
+</body>
+</html>

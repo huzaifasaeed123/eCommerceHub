@@ -1,0 +1,95 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.body-ejs{
+    flex:1;
+    /* For NavBar Overlay Problem */
+    margin-top: 80px;
+}
+/* NavBar Custom Styling */
+.navbar{
+    /* height: 5rem; */
+    background-color: white;
+}
+.fa-compass{
+    color: red;
+    font-size: 2rem;
+}
+.nav-item{
+    font-size: 1rem;
+    color: #222222 !important;
+}
+
+
+/* //Footer Styling */
+.footer-info-links a{
+    color: #222222;
+}
+.footer-info-links a:hover{
+    text-decoration: underline;
+}
+.footer-info{
+    height: 150px;
+    font-size: 1.2rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-info-social i{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+/* Single List ITEM */
+.sinlelistCard img{
+    height: 250px;
+    width: 600px;
+    border-radius: 5%;
+}
+.btndiv{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+/* Main All Listing  */
+.CardImg{
+    width: 280px;
+     height: 250px;
+     border-radius: 5%;
+    
+}
+.CardImg:hover{
+    opacity: 0.5;
+}
+.Card {
+    /* border: 2px solid black; */
+    height: 320px;
+    width: 300px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.CardContent{
+    padding-top: 10px;
+}
+.mainDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly !important;
+    flex-wrap: wrap;
+    margin-right: 5px;
+}
+
+.reviewsDiv{
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.reviewCard{
+    border: 0.5px solid gray;
+}

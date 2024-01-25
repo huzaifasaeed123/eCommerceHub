@@ -1,0 +1,18 @@
+<% if(success && success.length!=0){  %>
+
+    <div class="alert alert-warning alert-dismissible fade show col-5 offset-3" role="alert">
+        <strong class="col-9"><%= success  %></strong>
+       <i  class="fa-solid fa-xmark btn-close col-3 " data-bs-dismiss="alert"></i>
+      </div>
+<% } %>
+
+<% if(error && error.length!=0){  %>
+
+    <div class="alert alert-danger alert-dismissible fade show col-5 offset-3" role="alert">
+        <strong class="col-9"><%= error  %></strong>
+       <i  class="fa-solid fa-xmark btn-close col-3 " data-bs-dismiss="alert"></i>
+      </div>
+<% } %>
+
+
+ 

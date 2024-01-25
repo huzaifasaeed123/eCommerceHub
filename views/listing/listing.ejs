@@ -1,0 +1,40 @@
+<% layout('/layouts/boilerplate') -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Listing</title>
+    
+    <style>
+        
+    </style>
+</head>
+
+<body>
+   
+    <div class="mainDiv">
+        <!-- <h1><%= success  %></h1> -->
+
+        <% for(let i of allListing) {%>
+            <div class="Card">
+
+                <a href="/listings/<%=i._id  %>"><img class="CardImg"  src="<%=i.image.url  %>" alt="<%=i.image.filename  %>"></a>
+                <div class="CardContent">
+                    <b><%=i.title %></b> <br>
+                    
+                    &#36;<%=i.price.toLocaleString("en-US") %> <br>
+                    </p>
+                </div>
+                
+
+            </div>
+            <% } %>
+    </div>
+
+
+
+</body>
+
+</html>

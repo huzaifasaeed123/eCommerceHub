@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% layout('/layouts/boilerplate') -%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit List</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+        <form method="post" action="/listings/<%= SingleList._id %>/?_method=PATCH" novalidate class="needs-validation" enctype="multipart/form-data">
+            <h2>Edit Listings</h2>
+           
+            <div>
+                <label for="title">Title:: </label>
+                <input class="form-control mb-3" id="title" name="title" value="<%=SingleList.title  %>" type="text" placeholder="Enter Title here" required>
+                <div class="invalid-feedback mb-3">Please Enter Valid Titile</div>  
+            </div>
+            div>
+                <label for="des">Description:: </label> 
+                <textarea class="form-control mb-3" id="des" name="description"  type="text" placeholder="Enter Description" required><%=SingleList.description  %></textarea>
+                <div class="invalid-feedback mb-2">Please Enter Short Description</div> 
+            </div>
+            <div>
+                <img style="height: 250px; width: 400px;" src="<%=SingleList.image.url  %>" alt="">
+            </div>
+            <div>
+                <label for="img">Upload Image:: </label> 
+                <input class="form-control mb-3" id="img" name="image" type="file">
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="price">Price:: </label> 
+                    <input class="form-control mb-3" id="price" name="price" type="number" value="<%=SingleList.price  %>" placeholder="Enter price" required>
+                    <div class="invalid-feedback mb-2">Please Enter Valid Price</div> 
+                </div>
+                <div class="col-md-8">
+                    <label for="loc">Location:: </label> 
+                    <input class="form-control mb-3" id="loc" name="location" type="text" value="<%=SingleList.location  %>" placeholder="Enter Location" required>
+                    <div class="invalid-feedback mb-2">Please Enter Valid Location</div> 
+                </div>
+
+            </div>
+           
+            <div>
+                <label for="coun">Country:: </label> 
+                <input class="form-control mb-3" id="coun" name="country" value="<%=SingleList.country  %>" type="text" placeholder="Enter Country" required>
+                <div class="invalid-feedback mb-2">Please Enter Valid Price</div> 
+            </div>
+            <input class="btn btn-danger" type="submit" value="EDIT SUBMIT"><br><br>
+        </form>
+    </div>
+
+    </div>
+    <script src="/JS/Validation.js"></script>
+
+
+
+
+
+    <!-- <form method="post" action="/listings/<%= SingleList._id %>/?_method=PATCH">
+        <h1>Edit Listings</h1>
+        <label for="title">Title:: </label>
+        <input id="title" name="title" type="text" value="<%=SingleList.title  %>"> <br><br>
+        <label for="des">Description:: </label> 
+        <input id="des" name="description" type="text" value="<%=SingleList.description  %>"><br><br>
+        <label for="img">Image:: </label> 
+        <input id="img" name="image" type="text" value="<%=SingleList.image.url  %>"><br><br>
+        <label for="price">Price:: </label> 
+        <input id="price" name="price" type="number" value="<%=SingleList.price  %>"><br><br>
+        <label for="loc">Location:: </label> 
+        <input id="loc" name="location" type="text" value="<%=SingleList.location  %>"><br><br>
+        <label for="coun">Country:: </label> 
+        <input id="coun" name="country" type="text" value="<%=SingleList.country  %>"><br><br>
+        <input type="submit" value="SUBMIT">
+    </form> -->
+    
+</body>
+</html>
